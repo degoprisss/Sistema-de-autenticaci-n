@@ -20,14 +20,23 @@ let getUser = async (req, res, next) => {
 
 let newUser = async (req, res, next) => {
     try {
-        let { firstname, lastname, email } = req.body;
 
-        const password = await bcrypt.hash(req.body.password, saltRounds);
+        let existsEmail = await UserModel.find({ email: req.body.email })
 
-        let newUser = await UserModel.create({ firstname, lastname, email, password })
+        console.log(existsEmail)
 
-        let id = newUser._id 
-        res.status(201).json({id})
+        if (!existsEmail.length >= 1 ) {
+            let { firstname, lastname, email } = req.body;
+
+            const password = await bcrypt.hash(req.body.password, saltRounds);
+
+            let newUser = await UserModel.create({ firstname, lastname, email, password })
+
+            let id = newUser._id
+            res.status(201).json({ id })
+        } else {
+            res.status(201).json({Error: "El email ya existe!"})
+        }
 
     } catch (error) {
         return next(error)
