@@ -26,7 +26,8 @@ let newUser = async (req, res, next) => {
 
         let newUser = await UserModel.create({ firstname, lastname, email, password })
 
-        res.status(201).json(newUser)
+        let id = newUser._id 
+        res.status(201).json({id})
 
     } catch (error) {
         return next(error)
