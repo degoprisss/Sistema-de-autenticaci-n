@@ -23,8 +23,6 @@ let newUser = async (req, res, next) => {
 
         let existsEmail = await UserModel.find({ email: req.body.email })
 
-        console.log(existsEmail)
-
         if (!existsEmail.length >= 1 ) {
             let { firstname, lastname, email } = req.body;
 
