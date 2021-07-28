@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "323fd977-b74e-4384-9371-70a09c245171",
+		"name": "Prueba Backend node js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/v1/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstname",
+							"value": "Elias",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Luna",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "elias",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/users/61004079ed90a22e7465612c",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/61004079ed90a22e7465612c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"61004079ed90a22e7465612c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/users/6100479fa51dac32982d55df/active",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "active",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/6100479fa51dac32982d55df/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"6100479fa51dac32982d55df",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/user/61005c7170c4183848891f74",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleGlzdHNVc2VycyI6eyJhY3RpdmUiOmZhbHNlLCJfaWQiOiI2MTAwNmRlYmY4NjY4NjJmMGNlOGM4OTgiLCJmaXJzdG5hbWUiOiJFbGlhcyIsImxhc3RuYW1lIjoiTHVuYSIsImVtYWlsIjoibHVuYUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRPYnIyNjcya2lrYUhnNmdpajd5WHZ1bm5FZGhnaUFKYUJrVmJCOFhwQ2lOc0hSRjZQS2lwcSIsIl9fdiI6MH0sImlhdCI6MTYyNzQyMDYyNywiZXhwIjoxNjI3NTkzNDI3fQ.YrtWYextDKeFCahnTNbpVgDo95fcrkqzNx8kMuqTlTqv_0roqfobfuy7NJ0427iHoWTj-SMDykmY4LmeUOcX2Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/61005c7170c4183848891f74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"61005c7170c4183848891f74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/authorization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "meliss@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "melissa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/authorization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/messages/send/61005c7170c4183848891f74",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/messages/send/61005c7170c4183848891f74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						"send",
+						"61005c7170c4183848891f74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/messages/send/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/messages/send/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						"send",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
